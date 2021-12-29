@@ -37,7 +37,7 @@ function App() {
       alert("Input an IP Address!");
     } else {
       await fetch(
-        "https://geo.ipify.org/api/v1?apiKey=at_oA9cCddbSDKA9QdryPnTLB5r8MyPa&ipAddress=" +
+        `https://geo.ipify.org/api/v1?apiKey=${process.env.REACT_APP_API_KEY}&ipAddress=` +
           input
       )
         .then((res) => res.json())
